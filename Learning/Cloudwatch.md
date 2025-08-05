@@ -128,8 +128,3 @@ v
 
 ---
 
-**🖋️ Created by – Pritam Mane**
-```
-
----
-
