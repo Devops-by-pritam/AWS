@@ -1,2 +1,2 @@
 # AWS
-aws resources
+complete aws learning resources are in learning folder 
