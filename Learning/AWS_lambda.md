@@ -13,7 +13,7 @@ AWS Lambda is a **serverless compute service** that runs your code **in response
 
 ---
 
-### Use Case Example
+Use Case Example
 
 Suppose your organization has a compliance rule that certain AWS resources **must not be used**. If a developer mistakenly creates such a resource, Lambda can **detect and alert** using EventBridge (CloudWatch Events) + SNS.
 
