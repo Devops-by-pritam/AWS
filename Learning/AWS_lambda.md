@@ -1,7 +1,7 @@
 
 #  AWS Lambda - Simplified Guide
 
-##  What is AWS Lambda?
+###  What is AWS Lambda?
 
 AWS Lambda is a **serverless compute service** that runs your code **in response to events** and **automatically manages the compute resources** for you.
 
@@ -13,15 +13,15 @@ AWS Lambda is a **serverless compute service** that runs your code **in response
 
 ---
 
-##  Use Case Example
+### Use Case Example
 
 Suppose your organization has a compliance rule that certain AWS resources **must not be used**. If a developer mistakenly creates such a resource, Lambda can **detect and alert** using EventBridge (CloudWatch Events) + SNS.
 
 ---
 
-##   How to Create a Lambda Function
+### How to Create a Lambda Function
 
-### 1. Go to AWS Console â†’ Lambda Service
+### 1. Go to AWS Console a† Lambda Service
 
 ### 2. Click `Create function`
 
@@ -43,18 +43,18 @@ def lambda_handler(event, context):
     # Your logic here
 ```
 
->  You can change the handler name later in the **Configuration > General configuration** section.
+>You can change the handler name later in the **Configuration > General configuration** section.
 
 ### 4. Set Permissions (IAM Role)
 
 - Attach or create an IAM role with **permissions to access other AWS services** your function interacts with.
     - Example: S3, CloudWatch, SNS, DynamoDB, etc.
 
->  Without proper permissions, Lambda won't be able to talk to other services.
+> Without proper permissions, Lambda won't be able to talk to other services.
 
 ---
 
-##  Notification Example (Security/Compliance)
+### Notification Example (Security/Compliance)
 
 - Use CloudTrail or EventBridge to capture events like resource creation.
 - Trigger a Lambda function on such events.
