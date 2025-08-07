@@ -1,25 +1,25 @@
 
-# ðŸª„ AWS Lambda - Simplified Guide
+#  AWS Lambda - Simplified Guide
 
-## ðŸ§  What is AWS Lambda?
+##  What is AWS Lambda?
 
 AWS Lambda is a **serverless compute service** that runs your code **in response to events** and **automatically manages the compute resources** for you.
 
 ### Key Highlights:
 - **Event-driven:** Code is triggered by events like S3 uploads, DynamoDB updates, API Gateway calls, etc.
-- **No server management:** You donâ€™t need to provision or manage servers.
+- **No server management:** You don't need to provision or manage servers.
 - **Cost optimization:** You pay only for the compute time you consume.
-- **Security & Compliance:** Helps enforce policies â€” for example, alerting when disallowed resources are used.
+- **Security & Compliance:** Helps enforce policies for example, alerting when disallowed resources are used.
 
 ---
 
-## ðŸ” Use Case Example
+##  Use Case Example
 
 Suppose your organization has a compliance rule that certain AWS resources **must not be used**. If a developer mistakenly creates such a resource, Lambda can **detect and alert** using EventBridge (CloudWatch Events) + SNS.
 
 ---
 
-## ðŸ› ï¸ How to Create a Lambda Function
+##   How to Create a Lambda Function
 
 ### 1. Go to AWS Console â†’ Lambda Service
 
@@ -43,18 +43,18 @@ def lambda_handler(event, context):
     # Your logic here
 ```
 
-> âš™ï¸ You can change the handler name later in the **Configuration > General configuration** section.
+>  You can change the handler name later in the **Configuration > General configuration** section.
 
 ### 4. Set Permissions (IAM Role)
 
 - Attach or create an IAM role with **permissions to access other AWS services** your function interacts with.
     - Example: S3, CloudWatch, SNS, DynamoDB, etc.
 
-> âœ³ï¸ Without proper permissions, Lambda wonâ€™t be able to talk to other services.
+>  Without proper permissions, Lambda won't be able to talk to other services.
 
 ---
 
-## ðŸ”” Notification Example (Security/Compliance)
+##  Notification Example (Security/Compliance)
 
 - Use CloudTrail or EventBridge to capture events like resource creation.
 - Trigger a Lambda function on such events.
@@ -63,7 +63,7 @@ def lambda_handler(event, context):
 
 ---
 
-## âœ… Summary
+## Summary
 
 AWS Lambda is **powerful**, **scalable**, and **cost-effective**. It's great for:
 - Automating tasks
